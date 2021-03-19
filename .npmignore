@@ -1,0 +1,10 @@
+/src/
+coverage/
+data/
+node_modules/
+.editorconfig
+.eslintrc.json
+.git*
+composer.*
+package-lock.json
+tests/

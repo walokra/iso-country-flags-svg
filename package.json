@@ -1,0 +1,59 @@
+{
+	"name": "iso-country-flags-svg",
+	"version": "0.1.0",
+	"description": "Get a flag as SVG for a country",
+	"main": "dist/index.js",
+	"module": "src/index.js",
+	"private": true,
+	"files": [
+		"dist"
+	],
+	"engines": {
+		"node": ">= 8"
+	},
+	"scripts": {
+		"clean": "rimraf dist coverage",
+		"build": "rimraf dist && webpack",
+		"test": "jest ./src --verbose",
+		"update-docs": "md-magic --path ./README.md --ignore node_modules --config ./markdown.config.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/walokra/iso-country-flags.git"
+	},
+	"keywords": [
+		"country",
+		"flags",
+		"svg",
+		"country-flags"
+	],
+	"author": "marko Wallin",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/walokra/iso-country-flags/issues"
+	},
+	"homepage": "https://github.com/walokra/iso-country-flags#readme",
+	"devDependencies": {
+		"@babel/cli": "7.10.5",
+		"@babel/core": "^7.11.0",
+		"@babel/preset-env": "^7.11.0",
+		"babel-jest": "^26.2.2",
+		"babel-loader": "^8.2.2",
+		"codecov": "3.7.2",
+		"copy-webpack-plugin": "^6.2.1",
+		"coveralls": "3.1.0",
+		"jest": "23.6.0",
+		"markdown-magic": "0.1.25",
+		"pre-commit": "1.2.2",
+		"rimraf": "2.7.1",
+		"svg-country-flags": "^1.2.10",
+		"svg-inline-loader": "^0.8.2",
+		"url-loader": "^4.1.1",
+		"webpack": "^4.46.0",
+		"webpack-cli": "^3.3.12"
+	},
+	"pre-commit": [
+		"update-docs",
+		"test"
+	]
+}
