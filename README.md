@@ -4,7 +4,6 @@ A list of countries with flag images.
 
 Combines the idea and modified code from [country-flags-svg](https://github.com/ronatskiy/country-flags-svg) with images from [country-flags](https://github.com/hampusborgos/country-flags).
 
-
 ## Install
 
 ```sh
@@ -14,15 +13,15 @@ $ npm install iso-country-flags
 ## Usage
 
 ```js
-import { findFlagByNationality } from "iso-country-flags";
+import isoCountryFlags from 'iso-country-flags-svg';
 
-const flagUrl = findFlagByNationality("Australian");
+const flagSvg = isoCountryFlags.findFlagByNationality('Finnish').default;
 ```
 
 ```js
-import { countries } from "country-flags-svg";
+import isoCountryFlags from 'iso-country-flags-svg';
 
-const australia = countries[0];
+const australia = isoCountryFlags.countries[0];
 
 console.log(australia);
 /* => {
@@ -40,7 +39,6 @@ console.log(australia);
 
 Returns all available information.
 
-
 ### `findFlagByCountryName(countryName)`
 
 Returns SVG link of the official flag for a specified country (according to countryName) or empty string if is not exist
@@ -57,7 +55,7 @@ Returns SVG link of the official flag for a specified country (according to [ISO
 
 Returns SVG link of the official flag for a specified country (according to [ISO 3166-1 alpha-3](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) code) or empty string if is not exist
 
-## Available Flags*
+## Available Flags\*
 
 <!-- AUTO-GENERATED-CONTENT:START (LIST_OF_FLAGS) -->
 
